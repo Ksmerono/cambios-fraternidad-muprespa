@@ -7,19 +7,46 @@ body{
 
 
 .texto-borde {
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: white;
-  color: transparent;
-  letter-spacing: 2px;
-  text-shadow: 0 0 25px rgba(0, 0, 0, 0.445);
+  text-shadow:
+  -3px -3px 0 white, 
+   3px -3px 0 white,
+  -3px  3px 0 white,
+   3px  3px 0 white;
+margin: -0.3em; 
+color: #03993f;
 }
 
+.portales.rincon-salud .texto-borde{
+  text-shadow:
+  -3px -3px 0 white, 
+   3px -3px 0 white,
+  -3px  3px 0 white,
+   3px  3px 0 white;
+margin: -0.3em; 
+color: #0B7C9D;
+}
+
+.portales.rincon-asesor .texto-borde{
+  text-shadow:
+  -3px -3px 0 white, 
+   3px -3px 0 white,
+  -3px  3px 0 white,
+   3px  3px 0 white;
+margin: -0.3em; 
+color: #7E7E7E;
+}
+
+
+
 .portales.portal-paciente .texto-borde, .portales.portal-previene .texto-borde{
-  -webkit-text-stroke-width: 3px;
-  -webkit-text-stroke-color: white;
-  color: transparent;
-  letter-spacing: 2px;
-  text-shadow: 0 0 25px rgba(0, 0, 0, 0.445);
+  text-shadow:
+  -3px -3px 0 white, 
+   3px -3px 0 white,
+  -3px  3px 0 white,
+   3px  3px 0 white;
+margin: -0.3em; 
+color: #03993f;
+
 }
   
 
@@ -152,11 +179,12 @@ a:link, a:visited, a:active {
 
 .portales .glyphicon.glyphicon-menu-right {
   position: relative;
+  left: 10px;
 }
 
 @keyframes moveArrow {
   0% {
-    left: 0;
+    left: 10px;
     opacity: 1;
   }
   50% {
@@ -164,7 +192,7 @@ a:link, a:visited, a:active {
     opacity: 1;
   }
   100% {
-    left: 0;
+    left: 10px;
     opacity: 1;
   }
 }
@@ -173,6 +201,8 @@ a:link, a:visited, a:active {
   animation: none;
 
 }
+
+
 
 .portales:hover .glyphicon.glyphicon-menu-right {
   animation: moveArrow 2s infinite;
@@ -197,9 +227,9 @@ a:link, a:visited, a:active {
 @media (max-width: 768px){
   .portales.portal-hospital,.portales.rincon-salud,.portales.rincon-asesor,.portales.portal-sumutua{
     font-size: 40px !important;
-    height: 200px;
+    height: 150px;
   } 
-  
+
 
   
 }
