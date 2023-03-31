@@ -1,0 +1,205 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:900);
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 5rem;
+}
+
+
+.texto-borde {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+  letter-spacing: 2px;
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.445);
+}
+
+.portales.portal-paciente .texto-borde, .portales.portal-previene .texto-borde{
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: white;
+  color: transparent;
+  letter-spacing: 2px;
+  text-shadow: 0 0 25px rgba(0, 0, 0, 0.445);
+}
+  
+
+
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
+
+.portal-paciente{
+  background-image: linear-gradient(to right, #03993f7e 0%, #03993fc2 100%),url("img/Paciente.webp");
+}
+
+.portal-sumutua{
+  background-image: linear-gradient(to right, #03993f7e 0%, #03993fc2 100%),url("img/Emprendedor.webp");
+}
+
+.portal-hospital{
+  background-image: linear-gradient(to right, #03993f7e 0%, #03993fc2 100%),url("img/Portal\ hospital.webp");
+}
+
+
+.portal-paciente:before, .portal-sumutua:before, .portal-hospital:before{
+  background: linear-gradient(to left, transparent 0%, #03993fc2 100%);
+}
+
+
+
+.portal-previene{
+  background-image: linear-gradient(to right, #FF7A007e 0%, #FF7A00c2 100%),url("img/Previene.webp");
+
+}
+.portal-previene:before{
+  background: linear-gradient(to left, transparent 0%, #FF7A00c2 100%);
+}
+
+.rincon-salud{
+  background-image: linear-gradient(to right, #0B7C9D7e 0%, #0B7C9Dc2 100%),url("img/Rincon_salud.webp");
+}
+.rincon-salud:before{
+  background: linear-gradient(to left, transparent 0%, #0B7C9Dc2 100%);
+}
+.rincon-asesor{
+  background-image: linear-gradient(to right, #7E7E7E7e 0%, #7E7E7Ec2 100%),url("img/Asesor.webp");
+
+}
+.rincon-asesor:before{
+  background: linear-gradient(to left, transparent 0%, #7E7E7Ec2 100%);
+}
+
+
+.portales {
+  height: 280px;
+  widtH: 100%;
+  position: relative;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 1; /* Asegúrate de que este valor sea mayor que el de :before */
+}
+
+.portales:before {
+  content: '';
+  display: block;
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  left: 0;
+  transition: width 0.5s ease-out, opacity 0.5s ease-out;
+  z-index: 0; /* Asegúrate de que este valor sea menor que el del contenedor */
+  opacity: 0;
+}
+
+.portales:hover:before {
+  width: 100%;
+  opacity: 1;
+}
+.portales span p{
+  margin-top: -20px;
+  margin-bottom: -20px;
+}
+
+.portales span{
+  z-index: 1;
+}
+
+
+/**
+.portales .glyphicon.glyphicon-menu-right {
+  position: relative;
+  left: 0;
+}
+
+.portales:hover .glyphicon.glyphicon-menu-right {
+  animation: moveRight 0.5s linear infinite alternate;
+}
+
+@keyframes moveRight {
+  from {
+    left: 0;
+  }
+  to {
+    left: 30px;
+  }
+}
+
+**/
+
+
+
+/**
+
+.portales .glyphicon.glyphicon-menu-right {
+  left: 0;
+  transition: left 0.5s ease-in;
+  transition: left 0.5s ease-in-out;
+}
+
+.portales:hover .glyphicon.glyphicon-menu-right {
+  left: 30px;
+}
+
+**/
+
+
+
+
+
+
+.portales .glyphicon.glyphicon-menu-right {
+  position: relative;
+}
+
+@keyframes moveArrow {
+  0% {
+    left: 0;
+    opacity: 1;
+  }
+  50% {
+    left: 30px;
+    opacity: 1;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+
+.portales .glyphicon.glyphicon-menu-right {
+  animation: none;
+
+}
+
+.portales:hover .glyphicon.glyphicon-menu-right {
+  animation: moveArrow 2s infinite;
+  left: 30px;
+}
+
+
+
+.text-white{
+  color: white;
+}
+
+.subtitulo{
+  font-size: 3rem;
+}
+
+.portales.portal-hospital,.portales.rincon-salud,.portales.rincon-asesor,.portales.portal-sumutua{
+  font-size: 35px !important;
+  height: 200px;
+} 
+
+@media (max-width: 768px){
+  .portales.portal-hospital,.portales.rincon-salud,.portales.rincon-asesor,.portales.portal-sumutua{
+    font-size: 40px !important;
+    height: 200px;
+  } 
+  
+
+  
+}
